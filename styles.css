@@ -41,7 +41,7 @@
 	width: auto;
   }
 
-  .myButton {
+  .myButton, .nav-bar {
 	color: white;
 	white-space:nowrap;
 	background: #3498db;

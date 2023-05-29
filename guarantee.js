@@ -69,12 +69,13 @@ function stripHTMLTags(htmlString) {
 setTimeout("checkWarranty()", 3000);
 //window.onload = checkWarranty();
 
-// Listen for the postMessage event
-window.addEventListener("message", function(event) {
-    // Check if the received message contains the warranty data
-    if (event.data && event.data.type === "request") {
-
-        var warranty = createWarranty(warrantyType, warrantyDuration);
-        window.postMessage({ type: "warrantyData", data: warranty }, "*");
-    }
-});
+// Listen for messages from the popup script
+chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+    console.log('Received message:', message);
+    console.log('Sender information:', sender);
+  
+    // Process the message and send a response back
+    var response = 'Response from main script';
+    sendResponse(response);
+  });
+  

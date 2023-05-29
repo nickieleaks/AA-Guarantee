@@ -15,6 +15,9 @@ function change(str) {
                 // Set the HTML content fetched from the file
                 contentElement.innerHTML = data;
                 contentElement.classList = str + 'table-container';
+
+                //Allows the Buttons to open a new link, button not onClick because 
+                //content security policy unsafe
                 links = contentElement.querySelectorAll('.myButton');
                 links.forEach(link => {
                     link.onclick = () => {
@@ -26,5 +29,5 @@ function change(str) {
     }
 }
 
-    
+
 
