@@ -1,0 +1,23 @@
+{
+  "name": "Guarantee",
+  "version": "0.1",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "background",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "action":{
+    "default_popup": "index.html",
+    "default_title": "???"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["guarantee.js"],
+      "run_At": ["document_end"]
+    }
+  ]
+}
