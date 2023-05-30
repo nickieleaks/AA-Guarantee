@@ -6,5 +6,11 @@ Install dependancies:
   Flask 
   Sqlite
 
-move to the backend directory
+move to the backend directory 
+
+python init_db.py
 python -m flask --app run app.py
+
+The server runs on port localhost:5000
+
+
